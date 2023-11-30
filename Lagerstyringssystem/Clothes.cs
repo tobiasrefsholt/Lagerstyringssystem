@@ -4,10 +4,17 @@ public class Clothes : IProduct
 {
     public string Name { get; set; }
     public double Price { get; set; }
-    public string Size { get; set; }
+    public ClothesSizes Size { get; set; }
+
+    public Clothes(string name, double price, ClothesSizes size)
+    {
+        Name = name;
+        Price = price;
+        Size = size;
+    }
 
     public void PrintInfo()
     {
-        throw new NotImplementedException();
+        Console.WriteLine($"Produkt: {Name} - Pris: {Price}kr - Størrelse: {Size}");
     }
 }
